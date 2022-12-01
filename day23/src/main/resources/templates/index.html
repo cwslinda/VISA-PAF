@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beer Style</title>
+</head>
+<body style="text-align:center">
+    <h1>Select your Beer's Style Below:</h1>
+    <div>
+        <!-- <form action="/styles" method="GET"> -->
+            <select name="styleList">
+                <option data-th-each="style: ${styleList}" data-th-value="${style.styleId}" data-th-text="${style.styleName}"></option>
+            </select>
+            <button>Search</button>
+        <!-- </form> -->
+    </div>
+</body>
+</html>

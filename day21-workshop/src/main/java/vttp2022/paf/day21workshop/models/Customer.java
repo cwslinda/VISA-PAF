@@ -1,5 +1,10 @@
 package vttp2022.paf.day21workshop.models;
 
+import org.springframework.jdbc.support.rowset.SqlRowSet;
+
+import jakarta.json.Json;
+import jakarta.json.JsonObject;
+
 public class Customer {
     private Integer id;
     private String company;
@@ -42,6 +47,23 @@ public class Customer {
     public String getStateProvince() { return stateProvince; }
     public void setStateProvince(String stateProvince) { this.stateProvince = stateProvince; }
 
+    
+    public static Customer create(SqlRowSet rs){
+        Customer c = new Customer();
+        c.setId(rs.getInt("id"));
+        c.setLastName(rs.getString("last_name"));
+        c.setFirstName(rs.getString("first_name"));
+        return c;
+    }
+
+
+    public JsonObject toJson(){
+        return Json.createObjectBuilder()
+            .add("id", getId())
+            .add("last_name", getLastName())
+            .add("first_name", getFirstName())
+            .build();
+    }
 
 
 

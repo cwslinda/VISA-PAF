@@ -26,7 +26,7 @@ public class CustomerRESTController {
             @RequestParam(required = false) String offset ){
 
             // query the database for the customer 
-            List<Customer> customers = cusRepo.getAllCustomer
+            List<Customer> customers = 
 
             }
 

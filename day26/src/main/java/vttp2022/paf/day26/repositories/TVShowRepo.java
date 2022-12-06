@@ -34,4 +34,11 @@ public class TVShowRepo {
 
         return results;
     }
+
+    public List<String> findAllGenres(){
+
+        List<String> genres = template.findDistinct(new Query(), "genres", C_TV_SHOWS, String.class);
+
+        return genres;
+    }
 }

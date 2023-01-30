@@ -26,13 +26,13 @@ Task 3:
     The default value for offset is 0 and limit is 5.
 
 - Get the details of a customer with the customer’s id:<br>
-    GET /api/customer/<customer_id>
-    Accept: application/json
+    GET /api/customer/<customer_id><br>
+    Accept: application/json<br>
     Return a 404 and an appropriate error object if the customer does not exist
 
-- Get all orders for a customer
-    GET /api/customer/<customer_id>/orders
-    Accept: application/json
+- Get all orders for a customer<br>
+    GET /api/customer/<customer_id>/orders<br>
+    Accept: application/json<br>
 
     This endpoint returns an array of orders in JSON. If the customer does not have any orders, the endpoint should return an empty array
     Return a 404 and an appropriate error object if the customer does not exist.

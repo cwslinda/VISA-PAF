@@ -14,7 +14,9 @@ Task 2:
 Configure the SpringBoot to use this database. Add the configurations to application.properties file
 
 Task 3:
-- Write REST controller(s) to process the following HTTP requests  Get a list of all customers
+- Write REST controller(s) to process the following HTTP requests 
+
+- Get a list of all customers:<br>
     GET /api/customers
     Accept: application/json
     
@@ -23,7 +25,7 @@ Task 3:
     - limit - return the number of records specified by limit
     The default value for offset is 0 and limit is 5.
 
-- Get the details of a customer with the customer’s id
+- Get the details of a customer with the customer’s id:<br>
     GET /api/customer/<customer_id>
     Accept: application/json
     Return a 404 and an appropriate error object if the customer does not exist

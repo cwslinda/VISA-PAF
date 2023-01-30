@@ -48,9 +48,6 @@ public class CustomerRESTController {
                 .status(HttpStatus.OK)
                 .contentType(MediaType.APPLICATION_JSON)
                 .body(result.toString());
-            
-            
-            
 
             }
 
